@@ -83,6 +83,10 @@ export default function Hero() {
             </a>
             <Link
               href="#portofolio"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('portofolio')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="px-8 py-3.5 bg-white text-blue-900 border-2 border-blue-100 hover:border-blue-300 font-bold rounded-full shadow-sm w-full sm:w-auto"
             >
               Lihat Karya Kami
@@ -125,12 +129,9 @@ export default function Hero() {
           {/* Rating */}
           <div className="flex flex-col items-center">
             <span className="text-4xl md:text-5xl font-black text-blue-900">
-              5.0
+              4.6
             </span>
-            <div className="flex text-yellow-400 mt-1 text-2xl">
-              ★★★★★
-            </div>
-            <span className="text-sm font-bold text-gray-500 uppercase tracking-widest mt-1">Rating Google</span>
+            <span className="text-sm font-bold text-gray-500 uppercase tracking-widest mt-1">Rating Google Maps</span>
           </div>
         </div>
       </div>

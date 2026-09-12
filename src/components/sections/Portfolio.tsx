@@ -20,13 +20,13 @@ function useFadeIn() {
 export default function Portfolio() {
   const ref = useFadeIn(); // Panggil hook-nya di sini
   
-  const portfolioItems = [
-    { id: 1, title: "Wedding Agus & Habiba", category: "Wedding", image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" },
-    { id: 2, title: "Prewedding Outdoor", category: "Prewedding", image: "https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80" },
-    { id: 3, title: "Siraman & Pengajian", category: "Traditional", image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80" },
-    { id: 4, title: "Engagement Event", category: "Engagement", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800&q=80" },
-    { id: 5, title: "Corporate Gathering", category: "Event", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80" },
-    { id: 6, title: "Product Photography", category: "Commercial", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80" },
+  const portfolioItems: { id: number; title: string; category: string; image: string; igEmbed?: string }[] = [
+    { id: 1, title: "Wedding Agus & Habiba", category: "Wedding", image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80", igEmbed: "https://www.instagram.com/p/CBUJtGzJyun/embed" },
+    { id: 2, title: "Prewedding Outdoor", category: "Prewedding", image: "https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80", igEmbed: "https://www.instagram.com/p/B5r39qbJFvA/embed" },
+    { id: 3, title: "Siraman & Pengajian", category: "Traditional", image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80", igEmbed: "https://www.instagram.com/p/CBW4xnKp952/embed" },
+    { id: 4, title: "Engagement Event", category: "Engagement", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800&q=80", igEmbed: "https://www.instagram.com/p/BtdJHVYlRH9/embed" },
+    { id: 5, title: "Corporate Gathering", category: "Event", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80", igEmbed: "https://www.instagram.com/p/CBUIp3KJkdu/embed" },
+    { id: 6, title: "Product Photography", category: "Commercial", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80", igEmbed: "https://www.instagram.com/p/ByS1suXAEu1/embed" },
   ];
 
   return (
@@ -46,20 +46,32 @@ export default function Portfolio() {
               key={item.id}
               className="group relative rounded-3xl overflow-hidden aspect-square shadow-sm hover:shadow-2xl transition-all duration-500 bg-slate-100 border border-slate-100"
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover object-center group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                <span className="text-cyan-400 text-xs font-bold tracking-widest uppercase mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  {item.category}
-                </span>
-                <h3 className="text-white text-xl font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                  {item.title}
-                </h3>
-              </div>
+              {item.igEmbed ? (
+                <iframe
+                  src={item.igEmbed}
+                  className="w-full h-full border-none"
+                  scrolling="no"
+                  allowTransparency={true}
+                  allow="encrypted-media"
+                ></iframe>
+              ) : (
+                <>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none">
+                    <span className="text-cyan-400 text-xs font-bold tracking-widest uppercase mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      {item.category}
+                    </span>
+                    <h3 className="text-white text-xl font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                      {item.title}
+                    </h3>
+                  </div>
+                </>
+              )}
             </div>
           ))}
         </div>

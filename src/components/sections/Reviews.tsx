@@ -43,7 +43,7 @@ export default function Reviews() {
 
           <div className="flex items-center gap-6 bg-slate-50 px-8 py-6 rounded-2xl border border-slate-100">
             <div className="text-center">
-              <span className="text-6xl font-black text-blue-900 block">5.0</span>
+              <span className="text-6xl font-black text-blue-900 block">4.6</span>
               <div className="flex text-yellow-400 mt-2 text-xl justify-center">
                 ★ ★ ★ ★ <span className="text-yellow-400/50">★</span>
               </div>

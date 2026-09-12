@@ -15,10 +15,10 @@ export default function Location() {
         </div>
 
         {/* Layout Kiri (Info) & Kanan (Peta) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           
           {/* Kolom Kiri: Informasi Detail */}
-          <div className="flex flex-col gap-8 bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+          <div className="flex flex-col justify-center gap-8 bg-white p-8 rounded-3xl shadow-lg border border-slate-100 h-full">
             
             {/* Alamat */}
             <div className="flex gap-5 items-start">
@@ -70,7 +70,7 @@ export default function Location() {
           {/* Kolom Kanan: Peta Google Maps */}
           <div className="w-full h-full min-h-[450px] bg-slate-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white relative group">
             <iframe 
-              src="https://maps.google.com/maps?q=Porobo%2C%20Mojodadi%2C%20Lopang%2C%20Lamongan&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=SAY%20PRODUCTION%20Porobo%2C%20Mojodadi%2C%20Lopang%2C%20Lamongan&t=&z=14&ie=UTF8&iwloc=&output=embed"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

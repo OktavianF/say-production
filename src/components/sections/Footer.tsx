@@ -52,7 +52,7 @@ export default function Footer() {
 
               {/* Instagram */}
               <a
-                href="#"
+                href="https://www.instagram.com/sayprod.id?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#E1306C] transition-all"
               >
                 <FaInstagram size={20} />
@@ -60,7 +60,7 @@ export default function Footer() {
 
               {/* Facebook */}
               <a
-                href="#"
+                href="https://www.facebook.com/share/19WquhT8jg/"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#4267B2] transition-all"
               >
                 <FaFacebook size={20} />
@@ -68,7 +68,7 @@ export default function Footer() {
 
               {/* TikTok */}
               <a
-                href="#"
+                href="https://www.tiktok.com/@sayprod.id"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-black transition-all"
               >
                 <FaTiktok size={20} />
@@ -81,7 +81,7 @@ export default function Footer() {
 
         {/* COPYRIGHT */}
         <div className="border-t border-white/10 pt-8 text-center text-slate-500 text-xs">
-          © {new Date().getFullYear()} SAY PRODUCTION. All rights reserved. | Built by Arya
+          © {new Date().getFullYear()} SAY PRODUCTION. All rights reserved. | Built by Launch Page Studio
         </div>
 
       </div>
