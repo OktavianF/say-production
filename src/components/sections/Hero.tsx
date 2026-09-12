@@ -100,7 +100,7 @@ export default function Hero() {
           <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-video bg-black">
             <Image
               src="/logos/wedding-rings.png"
-              alt="Karya SAY PRODUCTION"
+              alt="Cincin pernikahan elegan - Hasil karya foto SAY PRODUCTION Lamongan"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
               priority

@@ -5,10 +5,12 @@ import Portfolio from "../src/components/sections/Portfolio";
 import Reviews from "../src/components/sections/Reviews";
 import Location from "../src/components/sections/Location";
 import Footer from "../src/components/sections/Footer";
+import JsonLd from "../src/components/JsonLd";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50 relative">
+      <JsonLd />
       <Navbar />
       <Hero />
       <Services />
