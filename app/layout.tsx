@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     description: "Layanan foto dan video profesional untuk wedding, prewedding, dan event di Lamongan.",
     url: "https://sayproduction.my.id",
     siteName: "SAY PRODUCTION",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "SAY PRODUCTION",
+      }
+    ],
     locale: "id_ID",
     type: "website",
   },
@@ -32,6 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SAY PRODUCTION — Jasa Dokumentasi Profesional",
     description: "Layanan foto dan video profesional untuk wedding, prewedding, dan event di Lamongan.",
+    images: ["/og.png"],
   },
   robots: {
     index: true,
