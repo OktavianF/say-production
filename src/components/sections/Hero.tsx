@@ -129,7 +129,7 @@ export default function Hero() {
           {/* Rating */}
           <div className="flex flex-col items-center">
             <span className="text-4xl md:text-5xl font-black text-blue-900">
-              4.6
+              4.9
             </span>
             <span className="text-sm font-bold text-gray-500 uppercase tracking-widest mt-1">Rating Google Maps</span>
           </div>
